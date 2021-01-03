@@ -1,0 +1,506 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+section {
+    padding: 100px;
+}
+
+.banner {
+    position: relative;
+    min-height: 100vh;
+    background-image: url(img/banner.jpg);
+    background-size: cover;
+    background-position: right;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.banner h2 {
+    font-size: 3em;
+    color: #fff;
+    font-weight: 500;
+    line-height: 1.5em;
+}
+
+.banner h2 span {
+    font-size: 1.5em;
+    font-weight: 700;
+}
+
+.banner h3 {
+    font-size: 1.5em;
+    color: #fff;
+    font-weight: 500;
+}
+
+.btn {
+    position: relative;
+    background-color: #2196f3;
+    display: inline-block;
+    color: #fff;
+    margin-top: 20px;
+    padding: 10px 30px;
+    font-size: 15px;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 2px;
+    font-weight: 700;
+    transition: 0.09s;
+}
+.btn:hover {
+    background-color: #0b3d91;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 40px 100px;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.5s;
+}
+
+header.sticky {
+    background: #fff;
+    padding: 20px 100px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+
+header .logo {
+    color: #fff;
+    font-size: 24px;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+header.sticky .logo {
+    color: #111;
+}
+
+header ul {
+    position: relative;
+    display: flex;
+}
+header ul li {
+    position: relative;
+    list-style: none;
+}
+header ul li a {
+    position: relative;
+    display: inline-block;
+    margin: 0 15px;
+    color: #fff;
+    text-decoration: none;
+}
+
+header.sticky ul li a {
+    color: #111;
+}
+
+.heading {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 30px;
+    color: #111;
+}
+
+.heading h2 {
+    font-weight: 700;
+    font-size: 30px;
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.contentBx {
+    padding-right: 30px;
+}
+
+.contentBx h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.w50 {
+    min-width: 50%;
+}
+
+img {
+    max-width: 100%;
+}
+
+.services {
+    background-color: #111;
+}
+
+.heading.white {
+    color: #fff;
+}
+
+.services .content {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.services .content .servicesBx {
+    padding: 40px 20px;
+    background: #222;
+    max-width: 340px;
+    color: #fff;
+    margin: 20px;
+    text-align: center;
+    transition: 0.5s;
+}
+
+.services .content .servicesBx:hover {
+    background-color: #0B3954;
+}
+
+.services .content .servicesBx img {
+    max-width: 80px;
+    filter: invert(1);
+}
+
+.services .content .servicesBx h2{
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.work .content {
+    display: flex;
+    align-content: space-between;
+    flex-wrap: wrap;
+}
+
+.work .content .workBx {
+    width: 50%
+}
+
+.workBx {
+    position: relative;
+    width: 50%;
+}
+
+.image {
+    opacity: 1;
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: .5s ease;
+    backface-visibility: hidden;
+}
+
+.middle {
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.workBx:hover .image {
+    opacity: 0.3;
+}
+
+.workBx:hover .middle {
+    opacity: 1;
+}
+
+.text {
+    background-color: #0B3954;
+    color: white;
+    font-size: 16px;
+    padding: 16px 32px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+}
+
+.text h2 {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.testimonial {
+    background: #f7f7f7;
+}
+
+.testimonial .content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.testimonial .content .testimonialBx {
+    max-width: calc(50% - 40px);
+    padding: 60px 40px;
+    margin: 20px;
+    background-color: #2196f3;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+.testimonial .content .testimonialBx p {
+    color: #fff;
+    font-style: italic;
+    font-size: 16px;
+    font-weight: 300;
+}
+
+.testimonial .content .testimonialBx h3 {
+    color: #fff;
+    margin-top: 40px;
+    text-align: end;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 1em;
+}
+
+.testimonial .content .testimonialBx h3 span {
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.contact {
+    background: #111;
+}
+
+.formBx {
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.formBx form {
+    display: flex;
+    flex-direction: column;
+    text-align: end;
+}
+
+.formBx h3,
+.contactInfo h3 {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.formBx h5 {
+    color: #2196f3;
+    font-weight: 500;
+    padding-top: 10px;
+}
+
+.formBx form input,
+.formBx form textarea {
+    margin-bottom: 20px;
+    padding: 15px;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    background-color: #222;
+    color: #fff;
+    resize: none;
+}
+
+.formBx form textarea {
+    min-height: 200px;
+}
+
+.formBx form input::placeholder,
+.formBx form textarea::placeholder {
+    color: #999;
+}
+
+.formBx form input[type="submit"] {
+    max-width: 100px;
+    background-color: #2196f3;
+    text-transform: uppercase;
+    cursor: pointer;
+    letter-spacing: 2px;
+}
+
+.formBx .h3text h3 {
+    color: #fff;
+    font-weight: 600;
+    font-size: 20px;
+    max-width: 40%;
+    margin-top: 10px;
+    padding-top: 10px;
+}
+
+.form,
+.contactInfo {
+    min-width: 40%;
+}
+
+.formBx,
+.contactInfoBx {
+    position:relative;
+}
+
+.formBx .box,
+.contactInfoBx .box {
+    position:relative;
+    padding: 20px 0;
+    display: flex;
+}
+
+.formBx .box .icon,
+.contactInfoBx .box .icon {
+    min-width: 40px;
+    padding-top: 4px;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items:flex-start;
+    font-size: 24px;
+}
+
+.formBx .box .textContact,
+.contactInfoBx .box .textContact {
+    display: flex;
+    margin-top: 20px;
+    font-size: 16px;
+    color: #fff;
+    flex-direction: column;
+    font-weight: 300;
+}
+
+.formBx .box .textContact a,
+.contactInfoBx .box .textContact a {
+    display:flex;
+    font-size: 16px;
+    color: #fff;
+    flex-direction: column;
+    font-weight: 300;
+    text-decoration: none;
+}
+
+.formBx .box .textContact h3,
+.contactInfoBx .box .textContact h3 {
+    font-weight: 500;
+    color: #2196f3;
+    margin-bottom: 0;
+}
+
+.momentoPana {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.momentoPana h2 {
+    color: #2196f3;
+    font-weight: 500;
+    margin-bottom: 0;
+
+}
+
+.copyright {
+    background: #000;
+    color: #ffcdd2;
+    text-align: center;
+    padding: 10px;
+}
+
+/* Responsive */
+@media (max-width: 981px) {
+    header,
+    header.sticky {
+        z-index: 1000;
+        padding: 20px;
+    }
+
+    header.sticky {
+        background-color: #000000;
+    }
+
+    header.sticky .logo {
+        color: #f0f0f0;
+    }
+
+    .menu {
+        position: fixed;
+        top: 75px;
+        left: -100%;
+        display: block;
+        padding: 100px 50px;
+        text-align: center;
+        width: 50%;
+        height: 100vh;
+        background: #fff;
+        transition: 0.5s;
+        color: #000000;
+        border-top: 1px solid rgba(0, 0, 0, 0.2);
+    }
+
+    .menu.activate {
+        left: 0;
+    }
+
+    header ul li a {
+        font-size: 20px;
+        margin: 10px;
+        color: #000000;
+    }
+
+    .toggle {
+        width: 40px;
+        height: 40px;
+        background-image: url(img/menu.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 30px;
+        cursor: pointer;
+    }
+
+    .toggle.activate {
+        background-image: url(img/close.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 25px;
+        cursor: pointer;
+    }
+
+    section {
+        padding: 100px 50px;
+    }
+    .banner {
+        padding: 160px 50px 100px;
+    }
+
+    .banner h2 {
+        font-size: 1.5em;
+    }
+
+    .banner h3 {
+        font-size: 1em;
+    }
+
+    .btn {
+        margin-top: 10px;
+        padding: 10px 20px;
+        font-size: 16px;
+    }
+}
